@@ -1,0 +1,14 @@
+{
+  "name": "template-nestjs-clear-arch",
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "prestart:dev": "npm run build -w @ca/core",
+    "start:dev": "npm run build:w -w @ca/core & npm run start:dev -w nestjs"
+  },
+  "workspaces": [
+    "./src/*"
+  ]
+}

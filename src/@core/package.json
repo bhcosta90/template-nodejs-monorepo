@@ -1,0 +1,24 @@
+{
+  "name": "@ca/core",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "build:w": "tsc -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.9.4"
+  },
+  "exports": {
+    ".": "./dist/*.js"
+  },
+  "typesVersions": {
+    ">=4.0": {
+      ".": [
+        "./dist/*.js"
+      ]
+    }
+  }
+}
