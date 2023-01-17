@@ -5,8 +5,8 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "prestart:dev": "npm run build -w @ca/core",
-    "start:dev": "npm run build:w -w @ca/core & npm run start:dev -w nestjs"
+    "predev": "npm run build -w @ca/core",
+    "dev": "npm run build:w -w @ca/core & npm run start:dev -w nestjs"
   },
   "workspaces": [
     "./src/*"
