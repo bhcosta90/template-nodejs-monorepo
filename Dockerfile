@@ -12,9 +12,13 @@ RUN yarn && \
     npm run build -w nestjs && \
     yarn install --production --frozen-lockfile
 
-FROM base as prod
+FROM node:18-alpine as prod
+WORKDIR /app
+
 USER node
 COPY --chown=node:node --from=build /app/node_modules /app/node_modules
 COPY --chown=node:node --from=build /app/src/@core/package.json /app/src/@core/package.json
 COPY --chown=node:node --from=build /app/src/nestjs/dist /app/src/nestjs/dist
 COPY --chown=node:node --from=build /app/src/@core/dist /app/src/@core/dist
+
+CMD node src/nestjs/dist/main
