@@ -9,16 +9,15 @@
     "allowSyntheticDefaultImports": true,
     "target": "es2017",
     "incremental": true,
+    "skipLibCheck": true,
     "strictNullChecks": false,
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "allowJs": true,
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "baseUrl": "./src",
     "rootDir": "./src/",
+    "sourceMap": true,
     "declarationMap": true
   },
   "include": ["src"]

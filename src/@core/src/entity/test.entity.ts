@@ -1,5 +1,5 @@
-class Test {
+export class Test {
   constructor() {
-    console.log(Date.now());
+    console.log(`Actual date: ${new Date().toISOString()}`);
   }
 }
