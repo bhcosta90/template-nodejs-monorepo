@@ -8,7 +8,7 @@ describe("TestEntity Unit Test", () => {
         log: jest.fn(),
       })
   );
-  
+
   it("Constructor", () => {
     const entity = new Test();
     expect(entity).toBeInstanceOf(Test);
