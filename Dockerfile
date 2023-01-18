@@ -13,8 +13,8 @@ RUN yarn && \
     yarn install --production --frozen-lockfile
 
 FROM base as prod
-
-COPY --from=build /app/node_modules /app/node_modules
-COPY --from=build /app/src/@core/package.json /app/src/@core/package.json
-COPY --from=build /app/src/nestjs/dist /app/src/nestjs/dist
-COPY --from=build /app/src/@core/dist /app/src/@core/dist
+USER node
+COPY --chown=node:node --from=build /app/node_modules /app/node_modules
+COPY --chown=node:node --from=build /app/src/@core/package.json /app/src/@core/package.json
+COPY --chown=node:node --from=build /app/src/nestjs/dist /app/src/nestjs/dist
+COPY --chown=node:node --from=build /app/src/@core/dist /app/src/@core/dist
