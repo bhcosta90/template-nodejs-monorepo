@@ -20,8 +20,9 @@
     "sourceMap": true,
     "declarationMap": true,
     "paths": {
-      "@ca/core/*": ["./src/*"],
+      "@ca/core/*": ["./src/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
