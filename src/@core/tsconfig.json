@@ -18,7 +18,10 @@
     "allowJs": true,
     "rootDir": "./src/",
     "sourceMap": true,
-    "declarationMap": true
+    "declarationMap": true,
+    "paths": {
+      "@ca/core/*": ["./src/*"],
+    }
   },
   "include": ["src"]
 }

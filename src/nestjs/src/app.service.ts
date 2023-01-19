@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { Test } from '@ca/core/entity/test.entity';
+import { TestEvent } from '@ca/core/events/test.event';
 
 @Injectable()
 export class AppService {
   getHello(): string {
-    new Test();
+    TestEvent.createTestEntity();
     return 'Hello World!';
   }
 }
