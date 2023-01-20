@@ -2,7 +2,11 @@ FROM node:18-alpine as base
 WORKDIR /app
 
 FROM base as dev
-RUN npm install -g npm@9.3.1 @nestjs/cli
+RUN npm install -g npm@9.3.1 @nestjs/cli && \
+    apk add --update bash && \
+    rm -rf /var/cache/apk/* && \
+    rm -rf /tmp/*
+
 CMD yarn dev
 
 FROM base as build
