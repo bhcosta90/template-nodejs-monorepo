@@ -7,7 +7,7 @@ CMD yarn dev
 FROM base as build
 COPY . .
 RUN yarn && \
-    npm install -g npm@9.3.1 @nestjs/cli && \
+    npm install -g npm@9.3.1 @nestjs/cli bash && \
     npm run build -w @ca/core && \
     npm run build -w nestjs && \
     yarn install --production --frozen-lockfile && \
