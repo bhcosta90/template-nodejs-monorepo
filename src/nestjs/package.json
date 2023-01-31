@@ -72,6 +72,9 @@
       "**/*.(t|j)s"
     ],
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    moduleNameMapper: {
+      '@ca/core/(.*)$': '<rootDir>/../../../node_modules/@ca/core/dist/$1',
+    }
   }
 }
